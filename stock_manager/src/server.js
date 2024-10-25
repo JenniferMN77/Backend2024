@@ -5,8 +5,14 @@ class Server{
         this.app = express();
         this.port = 3000;
 
-        this.app.use(express.json());
+        this.app.use(express.json()); // es un middleware intetrceta la solicitud antes 
+
+        this.middlewares();
         this.routes();
+    }
+
+    middlewares(){
+        this.app.use(express.json());
     }
 
     routes(){

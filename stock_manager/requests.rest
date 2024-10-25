@@ -1,1 +1,8 @@
 GET http://localhost:3000/users/
+
+###
+GET http://localhost:3000/users/1
+
+
+// hacer los endpoint para agragar usuario, editar usuario, y
+// eliminar usuario y crear las rutas 
