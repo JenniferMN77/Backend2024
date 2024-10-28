@@ -1,8 +1,26 @@
 GET http://localhost:3000/users/
 
 ###
-GET http://localhost:3000/users/1
+GET http://localhost:3000/users/2
 
+###
+POST http://localhost:3000/users/
+ Content-Type: application/json
+
+ {
+    "name": "Carlos najera"
+ }
+
+###
+PUT http://localhost:3000/users/2
+ Content-Type: application/json
+
+ {
+    "name": "Jenn"
+ }
+
+###
+DELETE http://localhost:3000/users/1
 
 // hacer los endpoint para agragar usuario, editar usuario, y
 // eliminar usuario y crear las rutas 

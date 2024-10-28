@@ -28,4 +28,58 @@ const getById = (req, res) => {//otro endpoint
  res.send(user);
 }    
 
-module.exports = {getAll, getById};
+//inicio del endpoint para agregar un nuevo usuario
+const addUser = (req, res) => {
+    const{name} = req.body;
+
+    if(!name){
+        res.status(400).send('Name is requiered');
+        return;
+    } 
+    const newUser = {
+        id: users.length + 1, name
+    }
+    users.push(newUser);
+    res.status(201).send(newUser);
+};
+
+//editar usuaro
+const updateUser = (req, res) => {
+    const{id} = req.params;
+    const{name} = req.body;
+
+    if(isNaN(id)) {
+        res.status(400).send('Invalid ID');
+        return;
+    }
+    const user = users.find(user => user.id === +id);
+
+    if(!user){
+        res.status(404).send('User not found');
+        return;
+    }
+    user.name = name;
+    res.send(user);
+
+};
+
+const deleteUser = (req, res) => {
+    const {id} = req.params;
+
+    if(isNaN(id)) {
+        res.status(400).send('Invalid Id');
+        return;
+    }
+    const user = users.find((user)=>user.id===+id);
+
+    if(!user){
+        res.status(404).send('User not found');
+        return;
+    }
+    users.splice(user, 1);
+    res.status(204).send("user deleted ");
+
+}
+
+module.exports = {getAll, getById, addUser, updateUser, deleteUser};
+
