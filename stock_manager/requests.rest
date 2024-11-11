@@ -1,26 +1,68 @@
 GET http://localhost:3000/users/
 
 ###
-GET http://localhost:3000/users/2
+GET http://localhost:3000/users/1
 
 ###
 POST http://localhost:3000/users/
  Content-Type: application/json
 
  {
-    "name": "Carlos najera"
+    "username": "DIana",
+    "password": "chasss",
+    "email": "diana@gmail.com"
  }
 
 ###
-PUT http://localhost:3000/users/2
+PUT http://localhost:3000/users/3
  Content-Type: application/json
 
  {
-    "name": "Jenn"
+    "username": "Daniel",
+    "password": "Cass",
+    "email": "russel@gmail.com"
  }
 
 ###
-DELETE http://localhost:3000/users/1
+DELETE http://localhost:3000/users/2/
 
-// hacer los endpoint para agragar usuario, editar usuario, y
-// eliminar usuario y crear las rutas 
+//hacer los endpouint para la tabla staff
+
+// nota hacer 3 archivos staff en la carpeta controllers, models y routes... en ek server agrregar la ruta de staff
+// rutas de prueba para la tabla staff
+###
+GET http://localhost:3000/staff/
+
+###
+GET http://localhost:3000/staff/3
+
+###
+POST http://localhost:3000/staff/
+Content-Type: application/json
+
+{
+   "first_name": "Kian",
+   "last_name": "Law",
+   "birth_date": "2000-05-25",
+   "gender": "M",
+   "phone_number": "2581236987",
+   "email": "KianD@gmail.com",
+   "address": "Lunarian 23"
+}
+ 
+###
+PUT http://localhost:3000/staff/3
+Content-Type: application/json
+
+{
+   "first_name": "Sara",
+   "last_name": "Russell",
+   "birth_date": "1982-07-15",
+   "gender": "F",
+   "phone_number": "2468543222",
+   "email": "jane.smith@gmail.com",
+   "address": "Casas geo"
+}
+
+###
+DELETE http://localhost:3000/staff/2

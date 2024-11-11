@@ -1,5 +1,6 @@
 const express = require('express');
 const usersRoutes = require('./routes/users');
+const staffRoutes = require('./routes/staff');
 class Server{
     constructor() {
         this.app = express();
@@ -16,7 +17,8 @@ class Server{
     }
 
     routes(){
-        this.app.use('/users', usersRoutes);
+        this.app.use('/users', usersRoutes); 
+        this.app.use('/staff', staffRoutes);
     }
 
     start() {
