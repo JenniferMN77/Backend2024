@@ -5,6 +5,7 @@ const usersQueries = {
     create: 'INSERT INTO users (username, password, email) VALUES (?, ?, ?)',
     update: 'UPDATE users SET username = ?, password = ?, email = ? WHERE id = ?',
     delete: 'UPDATE users SET is_active = 0 WHERE id = ?',
+    updatePassword: 'UPDATE users SET password = ? WHERE id = ?',
 };
 
 module.exports = {usersQueries};
