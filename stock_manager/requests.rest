@@ -26,6 +26,36 @@ PUT http://localhost:3000/users/3
 ###
 DELETE http://localhost:3000/users/2/
 
+###
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "username": "Ana",
+  "password": "kaseina",
+  "email": "ana@gmail.com"
+  //para decifrar la contraseña
+}
+
+###
+
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+  "username": "Ana",
+  "password": "123456"
+  //para iniciar el login
+}
+
+###
+PUT http://localhost:3000/users/1/password
+Content-Type: application/json
+
+{
+  "newPassword": "123456"
+}
+
 //hacer los endpouint para la tabla staff
 
 // nota hacer 3 archivos staff en la carpeta controllers, models y routes... en ek server agrregar la ruta de staff
@@ -41,13 +71,14 @@ POST http://localhost:3000/staff/
 Content-Type: application/json
 
 {
-   "first_name": "Kian",
-   "last_name": "Law",
-   "birth_date": "2000-05-25",
-   "gender": "M",
-   "phone_number": "2581236987",
-   "email": "KianD@gmail.com",
-   "address": "Lunarian 23"
+   "first_name": "Angela",
+   "last_name": "Garcia",
+   "birth_date": "1997-04-02",
+   "gender": "F",
+   "phone_number": "2871540220",
+   "email": "angel@gmail.com",
+   "address": "Calle 4",
+   "user_id": 3
 }
  
 ###
@@ -61,7 +92,8 @@ Content-Type: application/json
    "gender": "F",
    "phone_number": "2468543222",
    "email": "jane.smith@gmail.com",
-   "address": "Casas geo"
+   "address": "Casas geo",
+   "user_id": 1
 }
 
 ###

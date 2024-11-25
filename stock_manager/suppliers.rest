@@ -1,0 +1,41 @@
+// request para suppliers
+// request para suppliers
+// request para suppliers
+// request para suppliers
+###
+GET http://localhost:3000/suppliers/
+
+###
+GET http://localhost:3000/suppliers/23439099
+
+###
+POST http://localhost:3000/suppliers/
+Content-Type: application/json
+
+{
+    "rfc": "JM230209",
+    "name": "Proveedor 7",
+    "description": "Proveedor de carnes",
+    "phone_number": "1234567890",
+    "email": "proveedor7@gmail.com",
+    "address": "mexico"
+}
+
+###
+PUT http://localhost:3000/suppliers/RFC23112024
+Content-Type: application/json
+
+{
+    "name": "Proveedor 3",
+    "description": "Proveedor de productos lacteos",
+    "phone_number": "2831450204",
+    "email": "proveedor3@gmail.com",
+    "address": "Tuxtepec, Oaxaca"
+}
+
+###
+DELETE http://localhost:3000/suppliers/MANJ022803J0
+
+
+
+
