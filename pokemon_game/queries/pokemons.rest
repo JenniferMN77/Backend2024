@@ -1,1 +1,36 @@
 GET http://localhost:3000/pokemons
+
+###
+GET http://localhost:3000/pokemons/2
+//para obtener por id
+
+###
+GET http://localhost:3000/pokemons/play
+//para tener aleatoriamente
+
+###
+POST http://localhost:3000/pokemons
+Content-Type: application/json
+
+{
+    "name": "pokemon nuevo",
+    "image": "url-imagen"
+}
+
+//para crear nuevo pokemon
+
+###
+PUT http://localhost:3000/pokemons/:id
+Content-Type: application/json
+
+{
+    "name": "pokemon quien sea",
+    "image": "url-imagen"
+}
+
+//para actualizar
+
+###
+DELETE http://localhost:3000/pokemons/2
+
+//para elimianr

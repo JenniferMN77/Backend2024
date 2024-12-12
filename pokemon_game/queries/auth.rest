@@ -1,0 +1,13 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    
+    "email": "fide9@gmail.com",
+    "password": "fidere"
+}
+
+###
+GET http://localhost:3000/users/protected
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzMzOTQwMTUxLCJleHAiOjE3MzM5NDA0NTF9.eSIWcozUSMugrDHuZ3wmXbt1Fr6k514Sp5l2ZkHAX5s
